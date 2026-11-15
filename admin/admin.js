@@ -10,7 +10,7 @@ const CONFIG = {
   projectsPath: 'projects/projects.json',
   skillsPath: 'skills.json',
   imageDir: 'assets/images/projects/',
-  siteUrl: 'https://buildwithsubhash.github.io/Personal-Portfolio/'
+  siteUrl: 'https://buildwithsubhash.github.io/PersonalPortfolio/'
 };
 
 const CATEGORIES = [
