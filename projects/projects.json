@@ -32,7 +32,7 @@
   {
     "name": "QR Generator",
     "desc": "A QR code generator.",
-    "category": "other",
+    "category": "basicweb",
     "image": "",
     "links": {
       "view": "",
