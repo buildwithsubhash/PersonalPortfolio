@@ -5,7 +5,7 @@
  * ------------------------------------------------------------------ */
 const CONFIG = {
   owner: 'buildwithsubhash',
-  repo: 'Personal-Portfolio',
+  repo: 'PersonalPortfolio',
   branch: 'main',
   projectsPath: 'projects/projects.json',
   skillsPath: 'skills.json',
