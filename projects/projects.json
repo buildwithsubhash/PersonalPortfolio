@@ -2,10 +2,10 @@
   {
     "name": "Expense Tracker",
     "desc": "An expense tracker built as an internship project.",
-    "category": "other",
-    "image": "",
+    "category": "basicweb",
+    "image": "expense-tracker-mwi3qd2e.webp",
     "links": {
-      "view": "",
+      "view": "https://6ac12e900593fa4b418f3616--apnaexpensetracker.netlify.app/",
       "code": "https://github.com/buildwithsubhash/Expense-Tracker-Internship-Project"
     }
   },
