@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Locked down on purpose: no third-party scripts, the only network call allowed is the GitHub API. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https: data: blob:; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Admin | Subhash Thakur</title>
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Portfolio admin</h1>
+    <div id="session" class="session" hidden>
+      <span id="who"></span>
+      <a id="live-link" href="../" target="_blank" rel="noopener">View site</a>
+      <button type="button" id="reload" class="ghost">Reload</button>
+      <button type="button" id="signout" class="ghost">Sign out</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="status" role="status" aria-live="polite" class="status" hidden></div>
+
+    <!-- ===== sign in ===== -->
+    <section id="login-view" class="card narrow">
+      <h2>Sign in</h2>
+      <p>Paste a GitHub <strong>fine-grained personal access token</strong> that can write to this repository. It stays in this browser and is only ever sent to <code>api.github.com</code>.</p>
+      <form id="login-form" autocomplete="off">
+        <label for="token">Access token</label>
+        <input id="token" type="password" autocomplete="off" spellcheck="false" required placeholder="github_pat_…">
+        <label class="inline"><input id="remember" type="checkbox"> Keep me signed in on this device</label>
+        <button type="submit" class="primary" id="login-btn">Sign in</button>
+      </form>
+      <details>
+        <summary>How do I create a token?</summary>
+        <ol>
+          <li>GitHub → <em>Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token</em>.</li>
+          <li><em>Repository access</em>: only select repositories → pick this portfolio repo.</li>
+          <li><em>Permissions → Repository permissions → Contents</em>: <strong>Read and write</strong>.</li>
+          <li>Set an expiry, generate, copy the token and paste it above.</li>
+        </ol>
+      </details>
+    </section>
+
+    <!-- ===== editor ===== -->
+    <section id="editor-view" hidden>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-projects" aria-selected="true" aria-controls="panel-projects">Projects</button>
+        <button type="button" role="tab" id="tab-skills" aria-selected="false" aria-controls="panel-skills">Skills</button>
+      </div>
+
+      <div id="panel-projects" role="tabpanel" aria-labelledby="tab-projects">
+        <div class="row-between">
+          <h2>Projects <span id="projects-count" class="muted"></span></h2>
+          <button type="button" id="add-project" class="primary">Add project</button>
+        </div>
+        <div id="project-form"></div>
+        <ul id="project-list" class="list"></ul>
+      </div>
+
+      <div id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" hidden>
+        <div class="row-between">
+          <h2>Skills <span id="skills-count" class="muted"></span></h2>
+          <button type="button" id="add-skill" class="primary">Add skill</button>
+        </div>
+        <div id="skill-form"></div>
+        <ul id="skill-list" class="list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== publish bar ===== -->
+  <div id="publish-bar" class="publish" hidden>
+    <span id="publish-summary"></span>
+    <span class="spacer"></span>
+    <button type="button" id="discard" class="ghost">Discard</button>
+    <button type="button" id="publish" class="primary">Publish changes</button>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* Shared theme layer: dark mode, focus styles, skip link, reduced motion.
+   Loaded after each page's own stylesheet. */
+
+:root { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+
+/* ---------- theme toggle button ---------- */
+.theme-toggle {
+  margin-left: 2.5rem;
+  margin-right: 0;
+  width: 4rem;
+  height: 4rem;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid #0e2431 !important;
+  background: transparent;
+  color: #0e2431;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.theme-toggle:hover { color: #011aff; border-color: #011aff !important; }
+@media (max-width: 768px) {
+  .theme-toggle { order: 2; margin-left: auto; margin-right: 1.5rem; }
+  #menu { order: 3; }
+}
+
+/* ---------- accessibility ---------- */
+:focus-visible { outline: 3px solid #ffae00; outline-offset: 3px; }
+.skip-link {
+  position: fixed;
+  top: -6rem;
+  left: 1rem;
+  z-index: 100000;
+  padding: 1rem 1.6rem;
+  background: #2506ad;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: .4rem;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  #particles-js { display: none; }
+}
+
+/* ---------- dark theme ---------- */
+html[data-theme="dark"] body { background: #0b0d1a; color: #d5d9f0; }
+html[data-theme="dark"] header { background-color: #11142a; box-shadow: 0 1px 6px rgba(0,0,0,.6); }
+html[data-theme="dark"] header .logo,
+html[data-theme="dark"] #menu { color: #e8ecff; }
+html[data-theme="dark"] header .logo:hover { color: #fc8c05; }
+html[data-theme="dark"] header .navbar ul li a { color: #e8ecff; }
+html[data-theme="dark"] header .navbar ul li a.active,
+html[data-theme="dark"] header .navbar ul li a:hover { color: #8fa2ff; }
+html[data-theme="dark"] .theme-toggle { color: #e8ecff; border-color: #e8ecff !important; }
+html[data-theme="dark"] .theme-toggle:hover { color: #ffae00; border-color: #ffae00 !important; }
+
+html[data-theme="dark"] .heading { color: #f2f4ff; }
+html[data-theme="dark"] .heading span { color: #c58bff; }
+html[data-theme="dark"] .work .heading span,
+html[data-theme="dark"] .skills .heading span { color: rgb(255, 230, 0); }
+html[data-theme="dark"] .work h2,
+html[data-theme="dark"] .skills h2 { color: #fff; }
+
+/* home */
+html[data-theme="dark"] .home .content h2 { color: #e8ecff; }
+html[data-theme="dark"] .home .content h2 span { color: #ff8a1f; }
+html[data-theme="dark"] .home .content p { color: #d5d9f0; }
+html[data-theme="dark"] .home .content p span { color: #ff8a8a; }
+html[data-theme="dark"] #particles-js canvas { filter: invert(1); opacity: .5; }
+
+/* about */
+html[data-theme="dark"] .about { background: #0f1226; color: #d5d9f0; }
+html[data-theme="dark"] .about .row .content h3 { color: #f2f4ff; }
+html[data-theme="dark"] .about .row .content .tag { color: #b8c2ff; }
+html[data-theme="dark"] .about .row .content .box-container .box p span { color: #8fa2ff; }
+
+/* education */
+html[data-theme="dark"] .education { background: #12152b; color: #d5d9f0; }
+html[data-theme="dark"] .education .box-container .box { background: #1b1f3a; color: #d5d9f0; }
+html[data-theme="dark"] .education .box-container .box .content h3 { color: #aebdff; }
+html[data-theme="dark"] .education h4 { color: #6fd05a; }
+
+/* experience */
+html[data-theme="dark"] .experience { color: #d5d9f0; }
+html[data-theme="dark"] .experience .timeline::after { background: #8fa2ff; }
+html[data-theme="dark"] .experience .container::after { background-color: #1b1f3a; color: #e8ecff; }
+
+/* contact */
+html[data-theme="dark"] .contact { background: #12152b; }
+html[data-theme="dark"] .contact .container { background: #1b1f3a; box-shadow: 0 5px 14px rgba(0,0,0,.5); }
+html[data-theme="dark"] form .field input,
+html[data-theme="dark"] form .message textarea { background: #12152b; border-color: #5b628f; color: #e8ecff; }
+html[data-theme="dark"] .field input::placeholder,
+html[data-theme="dark"] .message textarea::placeholder { color: #9aa3d6; }
+html[data-theme="dark"] .field input:focus,
+html[data-theme="dark"] .message textarea:focus { border-color: #c58bff; }
+
+/* 404 + footer */
+html[data-theme="dark"] .footer { background: #060822; border-top: 1px solid #1d2147; }
+
+html[data-theme="dark"] .experience .content,
+html[data-theme="dark"] .experience .content * { color: #111; }
+html[data-theme="dark"] .social-icons a { background: #e6e9ff; color: #02094b; }
+
+/* 404: the animated GIF has a white background, so the panel stays light */
+html[data-theme="dark"] .page_404 { color: #111; }
+
+/* project cards keep a yellow tag strip and a light hover panel, so their text stays dark */
+html[data-theme="dark"] .work .box-container .box .content,
+html[data-theme="dark"] .work .box-container .box .content h3,
+html[data-theme="dark"] .work .box-container .box .content p { color: #111; }
+
+/* orange hero accent: slightly deeper in light mode for readable contrast */
+html:not([data-theme="dark"]) .home .content h2 span { color: #e06600; }

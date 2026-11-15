@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Expense Tracker",
+    "desc": "An expense tracker built as an internship project.",
+    "category": "other",
+    "image": "",
+    "links": {
+      "view": "",
+      "code": "https://github.com/buildwithsubhash/Expense-Tracker-Internship-Project"
+    }
+  },
+  {
+    "name": "Stock Portfolio Tracker",
+    "desc": "A Python tool for tracking a stock portfolio.",
+    "category": "python",
+    "image": "",
+    "links": {
+      "view": "",
+      "code": "https://github.com/buildwithsubhash/Python-Stock-Portfolio-Tracker"
+    }
+  },
+  {
+    "name": "ChatBot",
+    "desc": "A chatbot written in Python.",
+    "category": "python",
+    "image": "",
+    "links": {
+      "view": "",
+      "code": "https://github.com/buildwithsubhash/Python-ChatBot"
+    }
+  },
+  {
+    "name": "QR Generator",
+    "desc": "A QR code generator.",
+    "category": "other",
+    "image": "",
+    "links": {
+      "view": "",
+      "code": "https://github.com/buildwithsubhash/QR-Generator"
+    }
+  },
+  {
+    "name": "Email Extractor",
+    "desc": "A Python script that extracts email addresses.",
+    "category": "python",
+    "image": "",
+    "links": {
+      "view": "",
+      "code": "https://github.com/buildwithsubhash/Python-Email-Extractor"
+    }
+  },
+  {
+    "name": "Hangman",
+    "desc": "The classic Hangman word game, written in Python.",
+    "category": "python",
+    "image": "",
+    "links": {
+      "view": "",
+      "code": "https://github.com/buildwithsubhash/Python-Hangman"
+    }
+  },
+  {
+    "name": "Personal Portfolio",
+    "desc": "This portfolio site: a responsive one-page website with a light and dark theme.",
+    "category": "basicweb",
+    "image": "",
+    "links": {
+      "view": "https://buildwithsubhash.github.io/Personal-Portfolio/",
+      "code": "https://github.com/buildwithsubhash/Personal-Portfolio"
+    }
+  }
+]
