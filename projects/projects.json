@@ -1,5 +1,15 @@
 [
   {
+    "name": "Personal Portfolio",
+    "desc": "This portfolio site: a responsive one-page website with a light and dark theme.",
+    "category": "basicweb",
+    "image": "personal-portfolio-mwjgk5gj.webp",
+    "links": {
+      "view": "https://buildwithsubhash.github.io/Personal-Portfolio/",
+      "code": "https://github.com/buildwithsubhash/Personal-Portfolio"
+    }
+  },
+  {
     "name": "Expense Tracker",
     "desc": "An expense tracker built as an internship project.",
     "category": "basicweb",
@@ -57,16 +67,6 @@
     "links": {
       "view": "",
       "code": "https://github.com/buildwithsubhash/Python-Hangman"
-    }
-  },
-  {
-    "name": "Personal Portfolio",
-    "desc": "This portfolio site: a responsive one-page website with a light and dark theme.",
-    "category": "basicweb",
-    "image": "personal-portfolio-mwjgk5gj.webp",
-    "links": {
-      "view": "https://buildwithsubhash.github.io/Personal-Portfolio/",
-      "code": "https://github.com/buildwithsubhash/Personal-Portfolio"
     }
   }
 ]
