@@ -20,6 +20,16 @@
     }
   },
   {
+    "name": "Resource-Hub",
+    "desc": "Study notes, ebooks and templates visitors can download. You manage everything from /admin/",
+    "category": "basicweb",
+    "image": "resource-hub-mwrwed52.webp",
+    "links": {
+      "view": "https://buildwithsubhash.github.io/Resource-Hub/",
+      "code": "https://github.com/buildwithsubhash/Resource-Hub"
+    }
+  },
+  {
     "name": "Expense Tracker",
     "desc": "An expense tracker built as an internship project.",
     "category": "basicweb",
